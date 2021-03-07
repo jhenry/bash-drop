@@ -35,8 +35,3 @@ echo "$plist" > "$plistPath"
 
 launchctl unload -w $plistPath
 launchctl load -w $plistPath
-#launchctl kickstart gui/$(id -u)/LoginScripts.BashDrop.sh
-
-
-
-#$(nohup $scriptPath &> /dev/null &)
