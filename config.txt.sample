@@ -1,0 +1,6 @@
+#!/bin/bash
+scpUser="jdoe"
+scpHost="example.org"
+scpDir="public_html/s"
+publicPath="https://example.org/s/"
+watchFolder="/Users/jdoe/Documents/screenshots"
