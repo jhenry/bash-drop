@@ -18,6 +18,7 @@ You will also need to provide bash with Full Disk Access, since the script is ma
 1. [Enable Full Disk Access for bash](https://apple.stackexchange.com/a/384314/409253).
 1. Download or clone this repository to a location in your home directory (i.e. /Users/jdoe/bin, or /Users/jdoe/Library/Scripts). i.e. ``cd /Users/jdoe/bin`` followed by ``wget https://github.com/jhenry/bash-drop/archive/master.zip`` 
 1. Set permissions on the scripts to be executable, i.e. ``chmod 755 bash-drop.sh install.sh``
+1. Copy/rename ``config.txt.sample`` to ``config.txt``, and edit the information there as appropriate.
 1. Run the installer, i.e. ``cd cd /Users/jdoe/bin/bash-drop``, then ``./installer.sh``  
 
 
