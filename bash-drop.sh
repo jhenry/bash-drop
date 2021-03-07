@@ -29,8 +29,7 @@ rawurlencode() {
   /usr/bin/osascript -e "display notification \"$fileName\" with title \"Uploading file...\""
 
   # Upload the file
-  #/usr/bin/scp -q -o LogLevel=QUIET "$filePath" "$scpTarget"
-  /usr/bin/scp "$filePath" "$scpTarget"
+  /usr/bin/scp -q -o LogLevel=QUIET "$filePath" "$scpTarget"
 
   if [ "$?" -eq "0" ];
   then
