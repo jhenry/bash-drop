@@ -21,7 +21,8 @@ rawurlencode() {
 }
 
 /usr/local/bin/fswatch --event Created "$watchFolder" | while read filePath ; do 
-  fileName=$(basename "$filePath")
+  hash=$(openssl rand -hex 6)
+  fileName=$(basename "$filePath"| sed "s/_[^\.]*/-${hash}/")
   encodedFileName=$(rawurlencode "$fileName")
   url="$publicPath$encodedFileName"
 
@@ -29,7 +30,7 @@ rawurlencode() {
   /usr/bin/osascript -e "display notification \"$fileName\" with title \"Uploading file...\""
 
   # Upload the file
-  /usr/bin/scp -q -o LogLevel=QUIET "$filePath" "$scpTarget"
+  /usr/bin/scp -q -o LogLevel=QUIET "$filePath" "$scpTarget/$fileName"
 
   if [ "$?" -eq "0" ];
   then
